@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for post in posts %}
+    <p>{{ post.title }}</p>
+    <p>{{ post.content }}</p>
+    <p>
+      <span><a href="{% url 'update-post' post.id %}">update</a></span>
+      <span> | </span>
+      <span><a href="{% url 'delete-post' post.id %}">delete</a></span>
+    </p>
+    <hr/>
+  {% endfor %}
+
+  {% if not posts %}
+    <p>There are no posts to show.</p>
+  {% endif %}
+{% endblock content %}
+
