@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for post in object_list  %}
+    <p>{{ post.title }}</p>
+    <p>{{ post.content }}</p>
+    <p>
+      <span><a href="{{ post.get_delete_url }}">Delete</a></span>
+      <span> | </span>
+      <span><a href="{{ post.get_update_url }}">Edit</a></span>
+    </p>
+  {% empty %}
+    <p>There are no posts to show</p>
+  {% endfor %}
+{% endblock content %}
