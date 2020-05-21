@@ -11,7 +11,6 @@ class HomePageView(generic.TemplateView):
 
 class ListPageView(generic.ListView):
     model = Post
-    template_name = 'list.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -19,16 +18,16 @@ class ListPageView(generic.ListView):
 
 
 class CreatePostView(generic.CreateView):
+    # template used: post_form.html
     model = Post
     fields = ['title', 'content']
-    template_name = 'create.html'
     success_url = reverse_lazy('blog:list-page')
 
 
 class UpdatePostView(generic.UpdateView):
+    # template used: post_form.html
     model = Post
     fields = ['title', 'content']
-    template_name = 'update.html'
     success_url = reverse_lazy('blog:list-page')
 
 
