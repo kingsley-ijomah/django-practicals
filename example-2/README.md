@@ -7,7 +7,7 @@
 - forms.Model
 - class based views (CBV)
 - create and run migrations
-- model relationships
+- model helper urls
 
 ### Objective
 

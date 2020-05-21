@@ -12,10 +12,6 @@ class HomePageView(generic.TemplateView):
 class ListPageView(generic.ListView):
     model = Post
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
-
 
 class CreatePostView(generic.CreateView):
     # template used: post_form.html
