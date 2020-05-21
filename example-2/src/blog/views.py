@@ -3,6 +3,7 @@ from django.views import generic
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from .models import Post
+from .forms import PostForm
 
 
 class HomePageView(generic.TemplateView):
@@ -16,14 +17,14 @@ class ListPageView(generic.ListView):
 class CreatePostView(generic.CreateView):
     # template used: post_form.html
     model = Post
-    fields = ['title', 'content']
+    form_class = PostForm
     success_url = reverse_lazy('blog:list-page')
 
 
 class UpdatePostView(generic.UpdateView):
     # template used: post_form.html
     model = Post
-    fields = ['title', 'content']
+    form_class = PostForm
     success_url = reverse_lazy('blog:list-page')
 
 
