@@ -1,6 +1,6 @@
 ## Django Example 2
 
-- Basic understanding of django practical
+- Use a Class Based View (CBV) to setup the CRUD
 
 ### Basic Django Concepts
 

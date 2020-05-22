@@ -1,6 +1,6 @@
 ## Django Example 1
 
-- basic understanding of django practical
+- create a function based view (FBV) and manually hook up CRUD
 
 ### Basic Django Concepts
 
