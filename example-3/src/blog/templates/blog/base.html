@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+</head>
+<body>
+  <h2>Blog Site</h2>
+
+  <p>
+    <span><a href="{% url 'blog:home-page' %}">Home Page</a></span>
+    <span> | </span>
+    <span><a href="{% url 'blog:list-page' %}">Posts</a></span>
+  </p>
+  {% block content %}
+  
+  {% endblock content %}
+</body>
+</html>

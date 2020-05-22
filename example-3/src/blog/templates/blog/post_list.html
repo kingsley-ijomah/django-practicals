@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for post in object_list  %}
+    <p>Title: {{ post.title }}</p>
+    <p>Content: {{ post.content }}</p>
+    <hr>
+  {% empty %}
+    <p>There are no posts to show</p>
+  {% endfor %}
+{% endblock content %}
