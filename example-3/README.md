@@ -1,13 +1,11 @@
 ## Django Example 2
 
-- Move Post creating out of frontend into Admin
+- Move Post creating out of frontend into admin
 
 ### Basic Django Concepts
 
-- forms.Model
-- class based views (CBV)
-- create and run migrations
-- model helper urls
+- Create super admin user
+- Register Post as admin site
 
 ### Objective
 
