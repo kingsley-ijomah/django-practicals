@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ object.title }}</h2>
+<h5>{{ object.author }} | {{ object.created_on|timesince }} ago</h5>
+
+<p>{{ object.content|safe }}</p>
+
+<hr>
+<h3>Comments</h3>
+{% for comment in object.comments.all %}
+  <p>{{comment.content}}</p>
+  <p><b>{{ comment.name }}</b></p>
+  <p>---</p>
+{% empty %}
+  <p>There are no comments to show.</p>
+{% endfor %}
+<hr>
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save Comment</button>
+</form>
+
+{% endblock content %}
