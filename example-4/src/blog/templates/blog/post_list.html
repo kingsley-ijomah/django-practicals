@@ -4,6 +4,11 @@
   {% for post in object_list  %}
     <p>Title: {{ post.title }}</p>
     <p>Content: {{ post.content|truncatewords:9 }}</p>
+    <p>
+      {% for tag in post.tag.all %}
+        <span style="background-color: grey; padding:2px 4px  ; color: #fff;">{{ tag.name }}</span>
+      {% endfor %}
+    </p>
     <p><span><a href="{{ post.get_details_url }}">Show More</a></span></p>
     <hr>
   {% empty %}
@@ -15,7 +20,7 @@
     {% if page_obj.has_previous %}
       <p><a href="?page={{ page_obj.previous_page_number }}">PREV </a></p>
     {% endif %}
-    
+
     {% if page_obj.has_next %}
       <p><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT</a></p>
     {% endif %}
