@@ -31,9 +31,9 @@ grid container needs to be larger than the grid children, use fixed px size not 
     "content content content sidebar"
     "footer footer footer footer";
 
-  /* justify-content: top;
-  justify-content: center;
-  justify-content: end; */
+  /* justify-content: top; */
+  /* justify-content: center; */
+  /* justify-content: end; */
 
   /* align-content: top;
   align-content: center;
